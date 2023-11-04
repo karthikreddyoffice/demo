@@ -9,7 +9,7 @@ import java.util.Map;
 @Component
 @ConfigurationProperties(prefix = "custom.key-value-pairs")
 public class KeyValueProperties {
-    private Map<String, String> keyValueMap = new HashMap<>();
+    private Map<String, String> keyValueMap;
 
     public Map<String, String> getKeyValueMap() {
         return keyValueMap;

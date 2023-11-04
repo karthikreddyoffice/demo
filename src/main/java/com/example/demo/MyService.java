@@ -5,6 +5,8 @@ import com.example.demo.key.KeyValueProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 public class MyService {
     private final KeyValueProperties keyValueConfig;
@@ -15,6 +17,7 @@ public class MyService {
     }
 
     public String getValueForKey(String key) {
-        return keyValueConfig.getKeyValueMap().get(key);
+        Map<String, String> keyValueMap = keyValueConfig.getKeyValueMap();
+        return keyValueMap.get(key);
     }
 }
