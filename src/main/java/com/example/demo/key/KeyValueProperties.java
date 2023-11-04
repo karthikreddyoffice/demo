@@ -1,15 +1,15 @@
-package com.example.demo;
+package com.example.demo.key;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Component
 @ConfigurationProperties(prefix = "custom.key-value-pairs")
-public class KeyValueConfig {
-    private Map<String, String> keyValueMap;
+public class KeyValueProperties {
+    private Map<String, String> keyValueMap = new HashMap<>();
 
     public Map<String, String> getKeyValueMap() {
         return keyValueMap;
